@@ -1,0 +1,17 @@
+# AmpereX AI Module - dependencies
+# Core forecasting
+prophet>=1.1.5
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Data contracts (vendor-neutral common JSON schema)
+pydantic>=2.0.0
+
+# Test suite
+pytest>=7.4.0
+
+# Optional: only needed if InfluxDBHistoryProvider is wired up to a real InfluxDB instance
+# influxdb-client>=1.38.0
+
+# Optional: only needed if OpenMeteoForecastProvider is used for live weather forecasts
+# requests>=2.31.0
