@@ -3,16 +3,19 @@
 ## What's in here
 
 ```
-role5/
-  CONTRACT.md              <- READ THIS FIRST. Push to team's main branch.
-  docker-compose.yml        <- spins up Mosquitto + InfluxDB together
-  mosquitto/config/
-    mosquitto.conf
-  subscriber/
-    requirements.txt
-    .env.example
-    dummy_publisher.py      <- fake sensor data, stands in for Member 3
-    mqtt_to_influx.py        <- YOUR deliverable: subscribes + stores
+  AmpereX/
+   │── CONTRACT.md
+   │── docker-compose.yml
+   │── README.md
+   │── requirements.txt
+   │── .env.example
+   │── dummy_publisher.py
+   │── mqtt_to_influx.py
+   └── mosquitto/
+      ├── config/
+      │   └── mosquitto.conf
+      ├── data/
+      └── log/
 ```
 
 ## How to run it (first time)
