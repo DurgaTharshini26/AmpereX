@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0B1220;
+    color: #F3F4F6;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B1220;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Custom styles for glassmorphism and panels */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(17, 24, 39, 0.85);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8);
+}
+
+/* Wind Turbine Rotation Animation */
+@keyframes rotate-turbine {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-turbine-rotate {
+  animation: rotate-turbine 5s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+/* Solar Pulse Animation */
+@keyframes solar-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+    filter: drop-shadow(0 0 2px rgba(245, 158, 11, 0.3));
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+    filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.8));
+  }
+}
+
+.animate-solar-pulse {
+  animation: solar-pulse 2.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Energy Flow Dash Animation */
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+
+.animate-flow {
+  stroke-dasharray: 6 10;
+  animation: flow-dash 1.2s linear infinite;
+}
+
+/* Live Pulse Indicator Animation */
+@keyframes live-pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.animate-live-indicator {
+  animation: live-pulse 2s infinite;
+}
+
+/* Grid Pulse Line Animation */
+@keyframes grid-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    stroke-width: 1.5;
+  }
+  50% {
+    opacity: 1;
+    stroke-width: 2.5;
+    filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.6));
+  }
+}
+
+.animate-grid-pulse {
+  animation: grid-pulse 3s infinite ease-in-out;
+}
+
+/* Custom premium glows */
+.glow-border-red {
+  border-left: 4px solid #EF4444;
+  box-shadow: inset 4px 0 15px -5px rgba(239, 68, 68, 0.15);
+}
+.glow-border-orange {
+  border-left: 4px solid #F59E0B;
+  box-shadow: inset 4px 0 15px -5px rgba(245, 158, 11, 0.15);
+}
+.glow-border-blue {
+  border-left: 4px solid #3B82F6;
+  box-shadow: inset 4px 0 15px -5px rgba(59, 130, 246, 0.15);
+}
+.glow-border-purple {
+  border-left: 4px solid #8B5CF6;
+  box-shadow: inset 4px 0 15px -5px rgba(139, 92, 246, 0.15);
+}
+.glow-border-green {
+  border-left: 4px solid #10B981;
+  box-shadow: inset 4px 0 15px -5px rgba(16, 185, 129, 0.15);
+}
