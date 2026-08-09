@@ -50,7 +50,6 @@ sensor_simulator/
 └── README.md         
 ```
 
----
 
 ## Prerequisites
 
@@ -73,8 +72,6 @@ sudo systemctl start mosquitto
 ```
 
 ---
-
-## Quick Start
 
 ### 1. Install Dependencies
 
