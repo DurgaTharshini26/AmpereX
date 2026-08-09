@@ -1,0 +1,5 @@
+# Sensor Simulator Dependencies
+# Python 3.11+ required
+
+paho-mqtt>=2.1.0
+requests>=2.32.0
